@@ -1,7 +1,7 @@
-FROM wowzamedia/wowza-streaming-engine-linux
+ARG WOWZA_VERSION
+FROM wowzamedia/wowza-streaming-engine-linux:${WOWZA_VERSION:-latest}
 
-# Dockerfile Maintainer                                                         
-MAINTAINER Jan Wagner "waja@cyconet.org"
+LABEL org.opencontainers.image.authors="soporte@ned.cl"
 
 ARG BUILD_DATE
 ARG BUILD_VERSION
@@ -12,7 +12,7 @@ ARG VCS_BRANCH
 # See http://label-schema.org/rc1/ and https://microbadger.com/labels
 LABEL org.label-schema.name="Wowza - Wowza Live Streaming Server" \
     org.label-schema.description="Wowza Live Streaming Server (with persistence)" \
-    org.label-schema.vendor="Cyconet" \
+    org.label-schema.vendor="Ned" \
     org.label-schema.schema-version="1.0" \
     org.label-schema.build-date="${BUILD_DATE:-unknown}" \
     org.label-schema.version="${BUILD_VERSION:-unknown}" \
