@@ -1,5 +1,5 @@
 IMAGE_NAME := nedmedia/wowza-streaming-engine-persistent
-WOWZA_VERSION := 4.8.12
+WOWZA_VERSION := 4.8.17
 MINOR := 0
 
 build:
